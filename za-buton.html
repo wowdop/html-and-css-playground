@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Za button</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      .continut {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      :root {
+        --c-albastru: hsla(220, 98%, 25%, 1);
+        --c-alb: hsla(220, 98%, 100%, 1);
+        --c-negru: hsla(220, 98%, 25%, 1);
+        --c-rosu: hsla(354, 84%, 44%, 1);
+        --c-galben: hsla(49, 97%, 54%, 1);
+        --c-verd: rgb(35, 159, 33);
+      }
+
+      .imagine {
+        background-image: var(--c-img);
+        width: 100%;
+        padding-top: 56.25%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .za-buton {
+        border-radius: 8px;
+        background-color: hsla(var(--h), var(--s), 25%, 1);
+        color: var(--c-alb);
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--c);
+        display: block;
+      }
+
+      .continut {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: hsla(var(--h), 40%, 25%, 1);
+        transition: 250ms;
+      }
+
+      [name='cutu'] {
+        display: none;
+      }
+
+      #mega-1[name='cutu']:checked ~ .continut {
+        --h: 220;
+      }
+
+      #mega-2[name='cutu']:checked ~ .continut {
+        --h: 280;
+      }
+
+      #mega-3[name='cutu']:checked ~ .continut {
+        --h: 340;
+      }
+
+      #mega-4[name='cutu']:checked ~ .continut {
+        --h: 400;
+      }
+
+      #mega-5[name='cutu']:checked ~ .continut {
+        --h: 460;
+      }
+
+      #mega-6[name='cutu']:checked ~ .continut {
+        --h: 520;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="radio" name="cutu" id="mega-1" />
+    <input type="radio" name="cutu" id="mega-2" />
+    <input type="radio" name="cutu" id="mega-3" />
+    <input type="radio" name="cutu" id="mega-4" />
+    <input type="radio" name="cutu" id="mega-5" />
+    <input type="radio" name="cutu" id="mega-6" />
+
+    <div class="continut">
+      <label
+        style="--h: 50; --s: 70%; --c: var(--c-alb)"
+        class="za-buton"
+        name="sal-ut"
+        value="one"
+        for="mega-1"
+      >
+        Click me
+      </label>
+      <label
+        style="--h: 220; --s: 50%; --c: var(--c-alb)"
+        class="za-buton"
+        name="sal-ut"
+        value="one"
+        for="mega-2"
+      >
+        Click me
+      </label>
+      <label
+        style="--h: 150; --s: 80%; --c: var(--c-alb)"
+        class="za-buton"
+        name="neata"
+        value="two"
+        for="mega-3"
+      >
+        Click me
+      </label>
+      <label
+        style="--h: 350; --s: 100%; --c: var(--c-alb)"
+        class="za-buton"
+        name="neata"
+        value="two"
+        for="mega-4"
+      >
+        Click me
+      </label>
+      <label
+        style="--h: 290; --s: 10%; --c: var(--c-alb)"
+        class="za-buton"
+        name="neata"
+        value="two"
+        for="mega-5"
+      >
+        Click me
+      </label>
+      <label
+        style="--h: 420; --s: 40%; --c: var(--c-alb)"
+        class="za-buton"
+        name="neata"
+        value="two"
+        for="mega-6"
+      >
+        Click me
+      </label>
+      <div class="imagine" style="--c-img: url(/image/mz-01.png)"></div>
+      <div class="imagine" style="--c-img: url(/image/mz-02.png)"></div>
+    </div>
+  </body>
+</html>
